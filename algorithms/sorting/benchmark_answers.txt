@@ -1,0 +1,12 @@
+quick sort      0.000000   0.000000   0.000000 (  0.010483)
+heap sort       0.000000   0.000000   0.000000 (  0.000103)
+bucket sort     0.000000   0.000000   0.000000 (  0.000122)
+insertion sort  0.010000   0.000000   0.010000 (  0.000122)
+selection sort  0.000000   0.000000   0.000000 (  0.000163)
+bubble sort     0.000000   0.000000   0.000000 (  0.000011)
+merge sort      0.000000   0.000000   0.000000 (  0.000191)
+
+
+I'm a bit surprised to see quick sort taking significantly longer than the rest. My thoughts on how that could be is the way it sorts the collection is ineffective. Having to split the collection so many times to sort each sub-collection can be very time consuming.
+
+On the other hand, everything else is almost identical in terms of speed, with the exception of bubble sort. It uses a very simple algorithm that may take several passes to completely sort an array but the implementation is simple. However, I could see this being a problem if the array size was much larger than the 50 elements we're testing.
