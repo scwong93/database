@@ -1,0 +1,22 @@
+1. O(1) is to flying across the country whereas O(2^n) is to walking.
+2. The best case scenario for binary search would be the first iteration.
+3. The worst case scenario for binary search would be the last iteration.
+4. The bounded case scenario for binary search would be any iteration, except the first and last iteration.
+5. n/a
+6. positive infinity
+7. O(2^n)
+8.  def find(elements)
+      if elements == 1
+        p "Size: 1, Worst Case: 1 iteration"
+      else
+        2.upto(elements) do |n|
+          p "Size: " + #{n} + ", Worst Case:" + #{n} + " iterations"
+        end
+      end
+    end
+9. O(n) will be vary depending on the number of elements. In this case, it can be anything up to the size of 10 elements. O(n) would then be the number of elements.
+10. Big-O of binary search is the last iteration in the search.
+11. Big-Omega of binary search is the middle element or first iteration.
+12. Big-Theta of binary search is anything but the first and last iteration.
+
+Graph image: https://www.google.com/search?rlz=1C5CHFA_enUS753US753&ei=Mo6UWs7yJY2WjQPAlptQ&q=graph+f%28x%29+%3D+x&oq=graph+f%28x%29+%3D+x&gs_l=psy-ab.3..0i20i263k1j0j0i22i30k1l7j0i22i10i30k1.1864.3572.0.3719.4.4.0.0.0.0.228.359.0j1j1.2.0....0...1.1.64.psy-ab..2.2.359...0i7i30k1j0i8i30k1.0.eikeFZ9zl9A
