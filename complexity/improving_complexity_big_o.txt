@@ -1,0 +1,8 @@
+poorly written ruby:    1.570000   0.010000   1.580000 (  1.593185)
+code optimization:      0.010000   0.000000   0.010000 (  0.012176)
+time complexity:        0.000000   0.000000   0.000000 (  0.002188)
+space complexity:       0.000000   0.000000   0.000000 (  0.002078)
+
+Poorly Written Ruby: O(2^n)
+Code Optimization: O(n)
+Time/Space Complexity: O(log n)
