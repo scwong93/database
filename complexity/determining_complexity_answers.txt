@@ -1,6 +1,0 @@
-1. O(1) because the algorithm will always be constant time, regardless of length or size.
-2. O(n) because the algorithm will always run as many times as the collection's length, as stated in `collection.length.times do |i|`.
-3. Also O(n) because as the collection and sub-collection grows in size, the number of iterations will also grow at the same rate.
-4. This should be O(2^n) because as n gets larger, the number of operations grows exponentially with the else statement.
-5. O(n) because as n gets bigger, the while loop will have to iterate just as many more times in the statement `while i < n-1`.
-6. This should be O(n log n) because it is called recursively until the left and right collections are both broken down into size of 1 or is sorted.
