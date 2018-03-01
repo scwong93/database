@@ -1,0 +1,34 @@
+1. string, integer, integer, float, float
+2. Database is commonly used when a large amount of data needs to be stored and/or organized. A text file is generally good for one-time uses.
+3. SQL is not procedural like other programming languages.
+4. A database contains many tables. In each table, there can be many rows and columns. In each cell, there is a value. This essentially creates a database, which can be substantially large and is also the most efficient way to store and organize data.
+5. Table is similar to a Class, which is used to section off data into categories. A row is a horizontal range of data, typically referencing a single transaction, person, or activity. A column is a vertical range that typically contains the same type of data, referencing a type of category. The value is each individual cell in the table, regardless of data type.
+6. String, integer, float
+7. payments table
+Select the list of dates and amounts from my payments
+5/1/2016 | 1500.00
+5/10/2016 | 37.00
+5/15/2016 | 124.93
+5/23/2016 | 54.72
+
+Select the amounts from my payments that are over 500
+1500.00
+
+Select all columns from the payment that was made to "Mega Foods"
+5/15/2016 | 'Mega Foods' | 124.93 | Groceries
+
+8. users table
+SELECT email, sign-up date
+FROM users
+WHERE name = 'DeAndre Data';
+returns 'datad@comcast.net' | 2008-01-20
+
+SELECT id
+FROM users
+WHERE user = 'aleesia.algorithm@uw.edu';
+returns 1
+
+SELECT *
+FROM users
+WHERE id = 4;
+returns 4 | 'Brandy Boolean' | 'bboolean@nasa.gov' | 1999-10-15

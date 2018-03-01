@@ -1,0 +1,92 @@
+1. INSERT INTO, UPDATE, DELETE FROM
+2. INSERT INTO designates a table, along with the corresponding values. UPDATE designates a table, SET designates a new value, WHERE designates which row. DELETE FROM designates a table, WHERE designates which row.
+3. Text for names, integers for numbers of guests and meals, booleans for RSVPing.
+4. First & Last name = text
+ RSVP = boolean  
+Number of guests = integer
+ Number of meals = float  
+
+CREATE TABLE wedding ( 
+     name text, 
+     rsvp boolean, 
+     guests integer, 
+     meals float 
+);  
+
+ALTER TABLE wedding ADD COLUMN card boolean;
+
+  ALTER TABLE wedding DROP COLUMN meals;  
+
+ALTER TABLE wedding ADD COLUMN table_number integer;  
+
+DROP TABLE wedding;
+
+5. CREATE TABLE books ( 
+     ISBN integer, 
+     title text, 
+     author text, 
+     genre text,  
+     publishing_date date, 
+     copies integer, 
+     available integer 
+);
+
+INSERT INTO books
+ VALUES 
+(0134129946, ‘Global Marketing’, ‘Warren J. Keegan’, ‘Education’, 2016-01-17, 3000, 287), 
+(1259420477, ‘Strategic Management: Concepts’, ‘Frank T. Rothaermel’, ‘Education’, 2016-01-11, 6000, 643), 
+(1429240008, ‘CoreMicroeconomics’, ‘Gerald Stone’, ‘Education’, 2010-12-14, 4000, 3623); 
+
+ UPDATE books 
+SET available = 642 
+WHERE ISBN = 1259420477;  
+
+DELETE FROM books
+ WHERE ISBN = 1429240008;
+
+6. CREATE TABLE spacecraft (
+      id integer,
+      name text, 
+     year_launched integer, 
+     country text, 
+     description text, 
+     orbit text,  
+     active boolean,  
+     distance integer 
+);
+
+  INSERT INTO spacecraft 
+VALUES
+ (8372, ‘Adventurer’, 1925, ‘Russia’, ‘Find extraterrestrial life’, ‘Venus’, FALSE, 162000000), 
+(8234, ‘Explorer’, 1835, ‘United Nations’, ’Testing satellite’, ‘Mars’, FALSE, 33926867), 
+(7424, ’SpaceY’, 2025, ‘United States’, ’Survey planet for possible relocation’, ‘Jupiter’, TRUE, 365000000);
+
+  DELETE FROM spacecraft 
+WHERE id = 8372; 
+
+ UPDATE spacecraft 
+SET active = FALSE
+ WHERE id = 7424; 
+
+7. CREATE TABLE email (
+      id integer,
+      subject text,
+      sender text,
+      recipients text,
+      body text, 
+     timestamp timestamp, 
+     read boolean, 
+     id_chain array SET DEFAULT ’none’ );  
+
+  INSERT INTO email 
+  VALUES 
+  (34, ‘Hello’, ‘awu5@outlook.com’, ‘jwu@gmail.com’, ‘This is a test’, 2017-01-23 19:10:25-07, TRUE, [31, 32, 33]), 
+  (85, ‘Greetings!’, ‘jonathan@yahoo.com’, ‘benson@aol.com’, ‘Are you coming over for Christmas?’, 2011-12-15 13:03:43-04, FALSE), 
+  (132, ‘RE: Job Posting’, ‘alicia@aerotek.com’, ‘jen@avid.com’, ‘I am very interested! How do i get in touch?’, 2013-03-23 23:32:45-04, TRUE, [131]);  
+
+  DELETE FROM email
+   WHERE id = 85;  
+
+  UPDATE spacecraft 
+  SET read = FALSE 
+  WHERE id = 132;
