@@ -1,30 +1,14 @@
-class City
-  attr_accessor :name
-  attr_accessor :latitude
-  attr_accessor :longtitude
-  attr_accessor :visited
+def nearest_possible_neighbor(graph_of_cities, current_city)
+  while current_city.visited == false
+    neighbor_cities = current_city.neighbors
+    next_city = neighbor_cities[0]
 
-  def initialize(name, latitude, longtitude)
-    @name = name
-    @latitude = latitude
-    @longtitude = longtitude
-    @visited = false
-  end
-
-  def distance(current_city, next_city)
-    lat_diff = current_city.latitude - next_city.latitude
-    long_diff = current_city.longtitude - next_city.longtitude
-    return lat_diff + long_diff
-  end
-
-  def nearest_possible_neighbor(graph_of_cities, current_city)
-    closest_city = nil
-    graph_of_cities.each do |city|
-      next if city == current_city
-      if distance(current_city, city) < distance(current_city, closest_city)
-        closest_city = city
+    for current_neighbor in neighbor_cities
+      if current_neighbor.distance < next_city.distance
+        next_city = current_neighbor
       end
     end
-    closest_city
+    current_city.visited = true
+    current_city = next_city
   end
 end
