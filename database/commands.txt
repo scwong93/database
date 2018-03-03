@@ -90,3 +90,4 @@ SET active = FALSE
   UPDATE spacecraft 
   SET read = FALSE 
   WHERE id = 132;
+ 
