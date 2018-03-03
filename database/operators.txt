@@ -1,0 +1,84 @@
+1. SELECT *
+   FROM books
+   WHERE id = 43;
+
+2. Select starts with S, From starts with F, and WHERE starts with W. SFW translates to San Francisco West, which is where I live.
+
+3.
+SELECT name, gender, age
+FROM dogs
+WHERE name LIKE '%labrador%';
+
+SELECT id
+FROM dogs
+WHERE year < 1;
+
+SELECT name, age
+FROM dogs
+WHERE gender = 'F'
+AND weight > 35;
+
+SELECT *
+FROM dogs
+WHERE name NOT LIKE '%shepherd%';
+
+SELECT id, age, weight, breed
+FROM dogs
+WHERE weight > 60
+OR name = 'great dane';
+
+4.
+Mushi | 2016-03-22
+Seashell |
+Azul | 2016-04-17
+Victoire | 2016-09-01
+Nala |
+
+Mushi | 1
+Seashell | 7
+Azul | 3
+Victoire | 7
+Nala | 1
+
+5.
+SELECT *
+FROM cats;
+
+SELECT DISTINCT ON (age) age, name
+FROM cats
+ORDER BY age;
+
+SELECT DISTINCT ON (name) name
+FROM cats
+ORDER BY name;
+
+6.
+AND - when I want to check if both conditions are true
+OR - when I want to check if any condition is true
+NOT - when I want to make sure this condition is being excluded
+> - when I am testing for a greater than value
+< - when I'm testing for a value less than the first
+= - when something is exactly the same
+<= - when I'm looking for something that is less than or the same
+>= - when I'm looking for something that is greater than or the same
+!= - something that is not this value
+<> - something more than or less than this value
+LIKE - to look for something that includes this
+BETWEEN - looking for something in between two objects
+IS TRUE/IS FALSE - testing whether something is true or false
+IS DISTINCT FROM - to look for something that is unique
+IS NULL - testing whether if a value exists
+
+7.
+Seashell
+Nala
+
+Mushi
+Seashell
+Victoire
+Nala
+
+00002
+00003
+00004
+00005
