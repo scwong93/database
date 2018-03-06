@@ -1,0 +1,43 @@
+1. One of the many ways is to use the JOIN statement to combine the tables.
+
+2.
+CROSS JOIN - Show all possibilities of each employee with each possible position they can work as
+INNER JOIN - Show only the employees names whose also currently working in a position
+LEFT OUTER JOIN - Show the names of all employees and the positions they are working as
+RIGHT OUTER JOIN - Show all the positions alongside the employees that work in those positions
+FULL OUTER JOIN - Show the names of all employees and the position they are working as, as well as all the positions and if they are filled or vacant
+
+3. Primary key is a unique identifier in a table, which can also be a foreign key in another table. A worker at a local Walgreens can work at another location temporarily to fill the store's needs. His primary key will still be his home store, the store that borrowed him will be using him as a foreign key.
+
+4. Aliasing is essentially abbreviating to shorten typing.
+
+5. SELECT professor.name, compensation.salary, compensation.vacation_days FROM professor AS p JOIN compensation AS c ON p.id = c.professor_id;
+
+6. NATURAL JOIN is easier to type and makes the code more clean, without having to type all shared columns. It can be used on the list of employees and the positions they are working as to output a table of matching data.
+
+7.
+SELECT employees.shift_id, shifts.id FROM employees FULL OUTER JOIN shifts ON employee.shift_id = shifts.id;
+
+SELECT employees.shift_id, shifts.id FROM employees CROSS JOIN shifts ON employee.shift_id = shifts.id;
+
+8.
+SELECT volunteers.name, dogs.name FROM volunteers LEFT OUTER JOIN dogs ON volunteers.foster_id = dogs.id;
+
+SELECT * FROM adopters CROSS JOIN dogs;
+
+SELECT * FROM cats JOIN dogs ON dog.in_foster = false OR cats.adoption_date = null;
+
+SELECT volunteers.name, dogs.name FROM volunteers FULL OUTER JOIN dogs ON volunteers.available_to_foster = true OR dogs.in_foster = false;
+
+9. SELECT adopters.name FROM adopters NATURAL JOIN cats ON cats.name = 'Seashell';
+
+10.
+SELECT books.title, holds.user_id, holds.rank FROM holds JOIN books ON holds.isbn = books.isbn;
+
+SELECT books.title, transactions.checked_out_date, transactions.checked_in_date FROM books LEFT OUTER JOIN transactions ON books.isbn = transactions.isbn;
+
+SELECT COUNT(transactions.checked_out_date), books.title FROM books LEFT OUTER JOIN transactions ON books.isbn = transactions.isbn WHERE transaction.date > 2018-02-05 AND transaction.date < 2018-03-04;
+
+SELECT books.title, transaction.checked_out_date FROM books LEFT OUTER JOIN transactions ON books.isbn = transaction.isbn WHERE transaction.checked_out_date < 2013-03-05;
+
+SELECT patrons.name, transactions.isbn, books.title FROM patrons JOIN transactions ON patrons.id = transactions.user_id JOIN books ON transaction.isbn = books.isbn;
