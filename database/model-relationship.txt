@@ -1,0 +1,25 @@
+1. 
+select guest.first_name, guest.last_name from guest full join booking on guest.id = booking.guest_id where room_id is NULL;
+
+select count(booking.guest_id), guest.first_name, guest.last_name from guest join booking on guest.id = booking.guest_id group by guest.first_name, guest.last_name having count(booking.guest_id) > 1;
+
+
+select room.id, guest.first_name, guest.last_name from guest join booking on guest.id = booking.guest_id join room on room.id = booking.room_id group by room.id, guest.first_name, guest.last_name having count(room.id) > 1;
+
+select room.id, count(guest.id) from booking join room on room.id = booking.room_id join guest on guest.id = booking.guest_id group by room.id;
+
+2. 
+Created an image of my diagram at: https://imgur.com/a/pRIyf
+
+I needed 3 tables - student, class, grade. The student tables will hold general information such as the student ID (primary key), name, address, and contact information. The class table will have a class ID (primary key), title of the class, and subject it belongs to. The grade table will have two foreign keys - class ID and student ID, along with the letter grade received. 
+
+3. 
+select class.title, student.name from student join grade on student.studentid = grade.studentid join class on class.classid = grade.classid group by class.title, student.name having class.title = 'Biology';
+
+select class.title, grade.grade, count(distinct grade.grade) from student join grade on student.studentid = grade.studentid join class on class.classid = grade.classid group by class.title, grade.grade having class.title = 'Biology';
+
+select class.title, count(student.studentid) from student join grade on student.studentid = grade.studentid join class on class.classid = grade.classid group by class.title;
+
+
+select max(count) from (select class.title, count(student.studentid) from student join grade on student.studentid = grade.studentid join class on class.classid = grade.classid group by class.title) as total;
+
