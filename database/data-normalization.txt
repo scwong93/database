@@ -1,0 +1,19 @@
+1. Data normalization helps increase writability and reduces redundancy. Many companies can use data normalization to see the numerous tables they have such as customer, products, and order and clean it up by reducing duplications.
+
+2.
+1NF - each cell in the table may only contain at most one value
+The products ordered by a customer may only contain one product in each cell.
+
+2NF - dependencies must associate with only the primary key on the same table
+Product ordered must be in the same table as order id, and without unrelated columns.
+
+3NF - there may only be one dependency per table, others must be split into other tables
+The customer id, product ordered and the order id would be in the order table, while the customer id, name, and address will be in the customer table.
+
+3. http://sqlfiddle.com/#!17/c7dfe/4
+
+4. Normalizing the data would increase the difficulty and create more complex queries to retrieve data. Having to iterate back and forth between tables can potentially compromise performance.
+
+5. If I wanted to denormalize the tables, I would use JOIN statements and bring them together. This would increase user readability and help better understand what's going on.
+
+6. Normalizing the data would slow down performance, making it significantly longer to retrieve information if it were a big database. However, it would reduce redundancy and eliminate duplications. With denormalization, I would have a better understanding of the relationships between tables and it would be much easier to read the table.
