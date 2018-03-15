@@ -14,6 +14,6 @@ The customer id, product ordered and the order id would be in the order table, w
 
 4. Normalizing the data would increase the difficulty and create more complex queries to retrieve data. Having to iterate back and forth between tables can potentially compromise performance.
 
-5. If I wanted to denormalize the tables, I would use JOIN statements and bring them together. This would increase user readability and help better understand what's going on.
+5. If I wanted to denormalize the tables, I could add the extra redundant column(s). By doing so, my query would be more clean and it could just query a single table.
 
 6. Normalizing the data would slow down performance, making it significantly longer to retrieve information if it were a big database. However, it would reduce redundancy and eliminate duplications. With denormalization, I would have a better understanding of the relationships between tables and it would be much easier to read the table.
