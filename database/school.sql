@@ -7,7 +7,7 @@ create table class (
 );
 
 create table grade (
-  studentID int references student(studentID), grade varchar(1), pass boolean, classID int references class(classID)
+  studentID int references student(studentID), grade varchar(1), classID int references class(classID)
 );
 
 insert into student
