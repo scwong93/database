@@ -1,0 +1,46 @@
+1. Subquery is a nested query, typically within the SELECT, FROM, or WHERE statement.
+
+2. A subquery can be nested in the SELECT statement at the end, using a nested SELECT statement to query an aggregate function.
+
+3. I would use a subquery when I have to retrieve data from two or more tables, without having to use JOIN.
+
+4. A row constructor builds a row with the table's existing columns for the query to compare against.
+
+5. The result will be NULL.
+
+6. The WHERE clause can include IN, NOT IN, ANY, SOME, ALL, EXISTS, and NOT EXISTS.
+
+7. http://sqlfiddle.com/#!17/b4c92/443
+
+8.
+http://sqlfiddle.com/#!17/ac120/269
+
+http://sqlfiddle.com/#!17/ac120/295
+
+http://sqlfiddle.com/#!17/ac120/306
+
+http://sqlfiddle.com/#!17/ac120/308
+
+http://sqlfiddle.com/#!17/ac120/317
+
+http://sqlfiddle.com/#!17/ac120/334
+
+9.
+http://sqlfiddle.com/#!17/62f88/86
+
+http://sqlfiddle.com/#!17/62f88/126
+
+http://sqlfiddle.com/#!17/62f88/412
+
+http://sqlfiddle.com/#!17/62f88/541
+
+http://sqlfiddle.com/#!17/62f88/184
+
+10.
+http://sqlfiddle.com/#!17/41482/22
+
+http://sqlfiddle.com/#!17/41482/71
+
+http://sqlfiddle.com/#!17/41482/48
+
+11. I've found that subqueries are easier to write than to use JOIN statements. It requires a lot less code than JOIN. However, JOIN statements is a bit more logical to read for me as it easily brings tables together despite being line intensive.
